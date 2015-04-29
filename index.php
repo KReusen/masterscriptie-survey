@@ -406,7 +406,8 @@ include('db_connection.php');
             );
             if (filter_var_array($data, FILTER_VALIDATE_BOOLEAN)) {
                 //geldige input
-                $_SESSION['q1'] = $_POST['q1'];
+				// eerst q1 ompolen
+                $_SESSION['q1'] = (6 - $_POST['q1']);
                 $_SESSION['q2'] = $_POST['q2'];
                 $_SESSION['q3'] = $_POST['q3'];
                 $_SESSION['q4'] = $_POST['q4'];
